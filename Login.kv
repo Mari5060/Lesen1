@@ -1,0 +1,39 @@
+<MainWindow>:
+    FloatLayout:
+        Image:
+            source: 'fdsfds.png'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, 0.2
+            Button:
+                text: 'Назад'
+                size_hint: 0.5, 1
+                background_color: 57/255, 72/255, 112/255
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                on_press: root.on_main_click()
+            Label:
+                text: 'Рахунок'
+        ScrollView:
+            size_hint: 1, 1
+            GridLayout:
+                cols: 1
+                row_default_height: 100
+                FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            background_color: 54/255, 79/255, 254/255
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                            on_press
+                        Image:
+                            source: 'fdsfds.png'
+                            size_hint: 0.1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        Label:
+                            text: '+10'
+                            size_hint: 0.1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        Label:
+                            text: '100'
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+

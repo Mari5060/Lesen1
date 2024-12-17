@@ -1,0 +1,136 @@
+<MainWindow>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            id: score_lbl
+            text: "Грошей від продаж: "
+        FloatLayout:
+            Image:
+                id: karas
+                source: "33345.jpg"
+                size_hint: 0.3, 0.3
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            Button:
+                text: ""
+                size_hint: 0.3, 0.8
+                background_color: 255/255, 105/255, 180/255, 0
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                on_press: root.click()
+        Button:
+            text: "Порибалити"
+            on_press: root.on_shop_screen()
+
+<ShopScreen>:
+    FloatLayout:
+        Image:
+            source: 'Pik.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint: 1, 0.2
+                Button:
+                    text: "На базар"
+                    size_hint: 0.5, 1
+                    background_color: 1, 0, 0, 0.5
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    on_press: root.on_main_screen()
+                Label:
+                    text: "На риболовлі"
+            ScrollView:
+                size_hint_y: None
+                size_hint: 1, 1
+                GridLayout:
+                    id: shopItems
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 1
+                    row_default_height: 100
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'images (1).jpg'
+
+                        Label:
+                            text: "+10"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "100"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(5000, 100)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'images (2).jpg'
+
+                        Label:
+                            text: "+100"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "5000"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(30000, 500)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'images (3).jpg'
+
+                        Label:
+                            text: "+500"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "30000"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(150000, 1000)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'Karac2.png'
+
+                        Label:
+                            text: "+1000"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "150000"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+
+
+
